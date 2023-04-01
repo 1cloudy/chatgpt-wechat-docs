@@ -23,8 +23,8 @@ async function extractUrls(files: File[]) {
   const urls = new Map<string, string>();
   for (const file of files) {
     if (file.properties) {
-      const urlProp = file.properties.properties["_url"].value;
-      if (urlProp.case === "text") {
+      const urlProp = file.properties.properties["_url"]?.value;
+      if (urlProp && urlProp.case === "text") {
         urls.set(file.id, urlProp.value);
       } else {
         continue;
