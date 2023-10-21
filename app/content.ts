@@ -8,6 +8,7 @@ import UserFeedbackAndCommunitySupport from "./content/user_feedback_and_communi
 import PrivacyPolicyAndTermsOfUse from "./content/privacy_policy_and_terms_of_use.mdx"
 import ErrorCodesAndSolutions from "./content/error_codes_and_solutions.mdx"
 import AccountManagement from "./content/account_management.mdx"
+import SocialAutoPost from "./content/social_auto_post.mdx"
 
 export type Doc = {
   title: string;
@@ -66,6 +67,14 @@ export const allDocs: Doc[] = [
     priority: 6,
     slug: "/docs/max_features",
     content: MaxFeatures({}),
+  },
+  {
+    title: "SocialAutoPost",
+    description: "定时自动发布内容",
+    category: "SocialAutoPost",
+    priority: 7,
+    slug: "/docs/social_auto_post",
+    content: SocialAutoPost({}),
   },
   {
     title: "常见问题",
